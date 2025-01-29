@@ -1,28 +1,14 @@
 import React from 'react';
-import { CounterViewModel } from './components/CounterViewModel';
 import './App.css'; 
+import CounterApp from './CounterApp'; 
 
-const CounterApp = () => {
-  const {
-    count,
-    isAutoIncrementEnabled,
-    increase,
-    decrease,
-    reset,
-    toggleAutoIncrement
-  } = CounterViewModel();
-
+const App = () => {
   return (
-    <div className="counter-app">
-      <h1>Counter: {count}</h1>
-      <button onClick={increase}>+</button>
-      <button onClick={decrease}>-</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={toggleAutoIncrement}>
-        {isAutoIncrementEnabled ? 'Disable Auto Increment' : 'Enable Auto Increment'}
-      </button>
+    <div className="App">
+      <h1>Welcome to the Counter App</h1>
+      <CounterApp /> {}
     </div>
   );
 };
 
-export default CounterApp;
+export default App;
